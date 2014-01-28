@@ -1,0 +1,52 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	background:url(bg.png) repeat;
+	margin:0;
+	color:#916451;
+	font-size:1em;
+	line-height:90%;
+}
+a{
+	text-decoration:none;
+	color:#666;
+}
+a:hover{
+	color:#000;
+}
+.game{
+	font-weight:600;
+}
+#footer{
+	background:white;
+	width:100%;
+	margin-top:10px;
+	text-align:center;
+	font-size:0.7em;
+}
+.viewers{
+	font-size:0.7em;
+}
+.twitchurl{
+	font-family: 'Open Sans', sans-serif;
+	border:0;
+	background:white;
+	width:100%;
+	color:#916451;
+}
+.streamerinfo{
+	background:white;
+	margin:4px;
+	padding:2px;
+	display:inline-block;
+	width:463px;
+	text-align:left;
+	height:75px;
+	vertical-align:middle;
+	transition: all 0.2s ease-in-out 0s;
+}
+.streamerinfo:hover{
+	background:#D0E4F0;
+}
+.descrip{
+	font-size:0.8em;
+}
