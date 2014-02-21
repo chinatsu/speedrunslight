@@ -12,7 +12,6 @@
 	</head>
 	<body>
 		<div id="streamList">
-			<!-- php snippet can be found here: https://gist.github.com/chinatsun/7728870 -->
 			<?php
 			$game = null;
 			
