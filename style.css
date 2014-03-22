@@ -1,45 +1,11 @@
-body{
-	font-family: 'Open Sans', sans-serif;
-	background:url(bg.png) repeat;
-	margin:0;
-	color:#916451;
-	font-size:1em;
-	line-height:90%;
-}
-a{
-	text-decoration:none;
-	color:#666;
-}
-a:hover{
-	color:#000;
-}
-.game{
-	font-weight:600;
-}
-#footer{
-	background:white;
-	width:100%;
-	margin-top:10px;
-	text-align:center;
-	font-size:0.7em;
-}
-.viewers{
-	font-size:0.7em;
-}
-.streamerinfo{
-	background:white;
-	margin:4px;
-	padding:2px;
-	display:inline-block;
-	width:463px;
-	text-align:left;
-	height:75px;
-	vertical-align:middle;
-	transition: all 0.2s ease-in-out 0s;
-}
-.streamerinfo:hover{
-	background:#D0E4F0;
-}
-.descrip{
-	font-size:0.8em;
-}
+body{font-family: "Helvetica","Open Sans","Arial",sans-serif;background:#666;margin:0;color:#B0B0B0;font-size:1em;line-height:90%;}
+a{text-decoration:none;color:#F7F7F7;}
+a:hover{color:#000;}
+.game{font-weight:700;}
+#footer{background:#5D5D5D;width:100%;margin-top:20px;position:relative;bottom:0;text-align:center;font-size:0.7em}
+.viewers{font-size:0.7em;}
+.twitchurl{font-family: "Helvetica","Open Sans","Arial",sans-serif;border:0;width:100%;color:#B0B0B0}
+.streamerinfo{background:#5D5D5D;margin:4px;padding:2px;display:inline-block;width:463px;text-align:left;height:75px;vertical-align:middle;transition: all 0.2s ease-in-out 0s;border-bottom:2px solid black}
+.streamerinfo:hover{background:#77DFD8}
+.descrip{font-size:0.8em;}
+
