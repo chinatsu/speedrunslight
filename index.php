@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>SpeedRunsLight - literally NoScript</title>
+		<title>SpeedRunsLight</title>
 		<meta name="description" content="Speedrunning live-streams.">
 		<meta name="keywords" content="stream, live">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="icon" type="image/png" href="favico.png">
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="style.css">
-		<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<link rel="stylesheet" href="lol.css">
 	</head>
 	<body>
 		<div id="streamList">
 			<?php
 			$game = null;
-			
+			$file = null;
+			$cache = "api.txt";
 			function game_blacklist($game)
 			{
 				$gameBlacklist = array("Age of Empires","Audiosurf","beatmania","Dance Dance Revolution","DayZ",
@@ -28,7 +27,13 @@
 				}
 				return false;
 			}
-			$json = json_decode(file_get_contents("http://api.speedrunslive.com/test/team"), true);
+			if (file_exists($cache) && (filemtime($cache) > (time() - 60 ))) {
+			   $file = file_get_contents($cache);
+			} else {
+			   $file = file_get_contents("http://api.speedrunslive.com/test/team");
+			   file_put_contents($cache, $file);
+			}
+			$json = json_decode($file, true);
 			foreach ($json["channels"] as $channel)
 			{
 				$game = $channel["channel"]["meta_game"];
@@ -45,7 +50,7 @@
 			?>
 		</div>
 		<div id="footer">
-			made by <a href="../">china</a>  • <a href="http://speedrunslive.com/">SpeedRunsLive</a>
+			made by <a href="../">china</a> • <a href="http://speedrun.tv/">SpeedrunTV</a> • <a href="http://speedrunslive.com/">SpeedRunsLive</a>
 		</div>
 	</body>
 </html>
